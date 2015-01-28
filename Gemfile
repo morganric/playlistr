@@ -27,7 +27,7 @@ gem 'jquery-ui-rails'
 gem 'dropzonejs-rails', '~> 0.4.16'
 
 gem 'audio_glue'
-
+gem 'audio_glue-sox_adapter'
 
 group :development do
   gem 'better_errors'
