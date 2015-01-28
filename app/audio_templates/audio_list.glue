@@ -1,0 +1,11 @@
+
+head {
+  format :mp3
+  rate 44100
+  channels 1
+}
+
+body {
+
+	  - url(@playlist.audio_files.first.fullpath)
+}

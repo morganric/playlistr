@@ -1,0 +1,22 @@
+  require 'audio_glue'
+    require 'adapter'
+
+head {
+  format :mp3
+  rate 44100
+  channels 1
+}
+
+body {
+
+	#file = open(@playlist.audio_files.first.fullpath)
+		# require 'open-uri'
+		# open('file.mp3', 'wb') do |file|
+		#   file << open(@playlist.audio_files.first.fullpath).read
+		# end
+	  # include AudioGlueHelper
+	  	
+	  	adapter = Adapter::SimpleAdapter.new
+		adapter.build(open(@playlist.audio_files.first.fullpath))
+	 - file("file.mp3")
+}

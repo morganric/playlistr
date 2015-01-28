@@ -1,0 +1,30 @@
+<%= simple_form_for(@playlist) do |f|  %>
+  <%= f.error_notification %>
+
+
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%#= f.input :published, as: :hidden %>
+    <br/>
+
+    <%#= f.attachinary_file_field  :audio %>
+
+    <%= attachinary_file_field_tag 'playlist[audio]', @playlist, :audio %>
+
+
+  </div>
+  <br/>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.attachinary-input').attachinary();
+  });
+</script>
