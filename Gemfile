@@ -26,6 +26,7 @@ gem 'rails-assets-jplayer'
 gem 'jquery-ui-rails'
 gem 'dropzonejs-rails', '~> 0.4.16'
 
+gem 'audio_glue'
 
 
 group :development do
