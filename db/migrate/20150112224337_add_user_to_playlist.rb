@@ -1,5 +1,5 @@
 class AddUserToPlaylist < ActiveRecord::Migration
   def change
-    add_column :playlists, :user_id, :ingeter
+    add_column :playlists, :user_id, :integer
   end
 end
