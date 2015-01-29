@@ -15,6 +15,14 @@
  *= require_self
  */
 
+ ul {
+ padding-left: 0px !important;
+ }
+
+ ul li {
+ list-style:none;
+ }
+
  .white {
  color:white !important;
  }
