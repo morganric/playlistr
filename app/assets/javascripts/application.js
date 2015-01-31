@@ -15,6 +15,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jPlayer/jquery.jplayer.min
+//= require jPlayer/add-on/jplayer.playlist.min
+//= require maps/demo
 
 //= require jquery.ui.widget
 //= require jquery.iframe-transport

@@ -11,7 +11,13 @@
  * file per style scope.
  *
 *= require mediaelementplayer
-
+*= require bootstrap
+*= vendor/assets/javascrpts/jPlayer/jplayer.flat.css 
+*= require animate
+*= require font-awesome.min
+*= require simple-line-icons
+*= require font
+*= require app
  *= require_tree .
  *= require_self
  */
