@@ -25,7 +25,7 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require slimscroll/jquery.slimscroll.min
-//= require jPLayer/demo
+
 
 //= require jplayer.js
 //= require jplayer.playlist.js
