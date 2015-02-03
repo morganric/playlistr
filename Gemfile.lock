@@ -112,6 +112,8 @@ GEM
     faker (1.4.3)
       i18n (~> 0.5)
     ffi (1.9.6)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.5)
     guard (2.11.1)
       formatador (>= 0.2.4)
@@ -269,10 +271,14 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     shellany (0.0.1)
+    simple-line-icons-rails (0.0.1)
+      railties (>= 3.2, < 5.0)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slop (3.6.0)
+    source-sans-pro-rails (0.6.1)
+      railties (>= 3.2, < 5.0)
     spring (1.2.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -547,6 +553,7 @@ DEPENDENCIES
   dropzonejs-rails (~> 0.4.16)
   factory_girl_rails
   faker
+  font-awesome-rails
   guard-bundler
   guard-rails
   guard-rspec
@@ -569,7 +576,9 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver
+  simple-line-icons-rails
   simple_form
+  source-sans-pro-rails
   spring
   spring-commands-rspec
   sqlite3

@@ -1,58 +1,20 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><#%= content_for?(:title) ? yield(:title) : "Playlistr" %></title>
-    <meta name="description" content="<%#= content_for?(:description) ? yield(:description) : "Playlistr" %>">
-    <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= cloudinary_js_config %>
-  </head>
-  <body>
-    <header>
-      <%#= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-      <div class="container" >
-       <%#= render 'layouts/messages' %>
-       <%#= yield %>
-       </div>
-    </main>
-  </body>
-  <script type="text/javascript">
-    
-$(document).ready(function() {
-  $('.attachinary-input').attachinary();
-});
 
-  </script>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en" class="app">
 <head>  
   <meta charset="utf-8" />
-  <title>PlayListr | Web Application</title>
+  <title>PlayListr</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" href="vendor/assets/javascrpts/jPlayer/jplayer.flat.css" type="text/css" />
-  <!-- <link rel="stylesheet" href="vendor/assets/stylesheets/bootstrap.css" type="text/css" />
-  <link rel="stylesheet" href="vendor/assets/stylesheets/animate.css" type="text/css" />
-  <link rel="stylesheet" href="vendor/assets/stylesheets/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="vendor/assets/stylesheets/simple-line-icons.css" type="text/css" />
-  <link rel="stylesheet" href="vendor/assets/stylesheets/font.css" type="text/css" />
-  <link rel="stylesheet" href="vendor/assets/stylesheets/app.css" type="text/css" />  --> 
-    <!--[if lt IE 9]>
-    <script src="js/ie/html5shiv.js"></script>
-    <script src="js/ie/respond.min.js"></script>
-    <script src="js/ie/excanvas.js"></script>
-  <![endif]-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Playlistr" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Playlistr" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= cloudinary_js_config %>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body class="">
   <section class="vbox">
@@ -61,15 +23,23 @@ $(document).ready(function() {
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
-        <a href="index.html" class="navbar-brand text-lt">
-          <i class="icon-earphones"></i>
-          <img src="images/logo.png" alt="." class="hide">
-          <span class="hidden-nav-xs m-l-sm">Musik</span>
+        <a href="<%= root_path %>" class="navbar-brand text-lt">
+          <div class="pull-left clearfix" style="margin-right:-15px;">
+          <div class="one" ></div>
+          <div class="two" ></div>
+          <div class="three" ></div>
+          <div class="four" ></div>
+          <div class="five" ></div>
+          <div class="six" ></div>
+          <div class="seven" ></div>
+          </div> 
+          <span class="hidden-nav-xs m-l white brand"><%= link_to 'PlayListr', root_path, :class => 'hidden-nav-xs m-l-sm', :style => "font-size: 20px;" %></span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
           <i class="icon-settings"></i>
         </a>
-      </div>      <ul class="nav navbar-nav hidden-xs">
+      </div>
+      <ul class="nav navbar-nav hidden-xs">
         <li>
           <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
             <i class="fa fa-indent text"></i>
@@ -126,7 +96,7 @@ $(document).ready(function() {
           <li class="dropdown">
             <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="images/a0.png" alt="...">
+                <img src="images /a0.png" alt="...">
               </span>
               John.Smith <b class="caret"></b>
             </a>
@@ -156,6 +126,7 @@ $(document).ready(function() {
         </ul>
       </div>      
     </header>
+    
     <section>
       <section class="hbox stretch">
         <!-- .aside -->
@@ -476,7 +447,7 @@ $(document).ready(function() {
                   <div class="dropdown dropup wrapper-sm clearfix">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <span class="thumb-sm avatar pull-left m-l-xs">                        
-                        <img src="images/a3.png" class="dker" alt="...">
+                        <img src="" class="dker" alt="...">
                         <i class="on b-black"></i>
                       </span>
                       <span class="hidden-nav-xs clear">
@@ -517,15 +488,14 @@ $(document).ready(function() {
         <section id="content">
           <section class="vbox">          
             <section class="scrollable wrapper">
-<!--                <header>
-      <%#= render 'layouts/navigation' %>
-    </header>
+
     <main role="main">
       <div class="container" >
-       <%#= render 'layouts/messages' %>
-       <%#= yield %>
+       <%= render 'layouts/messages' %>
+       <%= yield %>
        </div>
-    </main> -->
+    </main>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $('.attachinary-input').attachinary();
@@ -536,17 +506,78 @@ $(document).ready(function() {
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
       </section>
-    </section>    
+    </section>  
+    <footer class="footer bg-dark">
+                  <div id="jp_container_1" class="jp-jplayer">
+
+                    <div class="jp-type-playlist">
+                      <div id="jplayer_1" class="jp-jplayer hide"></div>
+                      <div class="jp-gui">
+                        <div class="jp-video-play hide">
+                          <a class="jp-video-play-icon">play</a>
+                        </div>
+                        <div class="jp-interface">
+                          <div class="jp-controls">
+                            <div><a class="jp-previous"><i class="icon-control-rewind i-lg"></i></a></div>
+                            <div>
+                              <a class="jp-play"><i class="icon-control-play i-2x"></i></a>
+                              <a class="jp-pause hid"><i class="icon-control-pause i-2x"></i></a>
+                            </div>
+                            <div><a class="jp-next"><i class="icon-control-forward i-lg"></i></a></div>
+                            <div class="hide"><a class="jp-stop"><i class="fa fa-stop"></i></a></div>
+                            <div><a class="" data-toggle="dropdown" data-target="#playlist"><i class="icon-list"></i></a></div>
+                            <div class="jp-progress hidden-xs">
+                              <div class="jp-seek-bar dk">
+                                <div class="jp-play-bar bg-info">
+                                </div>
+                                <div class="jp-title text-lt">
+                                  <ul>
+                                    <li></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="hidden-xs hidden-sm jp-current-time text-xs text-muted"></div>
+                            <div class="hidden-xs hidden-sm jp-duration text-xs text-muted"></div>
+                            <div class="hidden-xs hidden-sm">
+                              <a class="jp-mute" title="mute"><i class="icon-volume-2"></i></a>
+                              <a class="jp-unmute hid" title="unmute"><i class="icon-volume-off"></i></a>
+                            </div>
+                            <div class="hidden-xs hidden-sm jp-volume">
+                              <div class="jp-volume-bar dk">
+                                <div class="jp-volume-bar-value lter"></div>
+                              </div>
+                            </div>
+                            <div>
+                              <a class="jp-shuffle" title="shuffle"><i class="icon-shuffle text-muted"></i></a>
+                              <a class="jp-shuffle-off hid" title="shuffle off"><i class="icon-shuffle text-lt"></i></a>
+                            </div>
+                            <div>
+                              <a class="jp-repeat" title="repeat"><i class="icon-loop text-muted"></i></a>
+                              <a class="jp-repeat-off hid" title="repeat off"><i class="icon-loop text-lt"></i></a>
+                            </div>
+                            <div class="hide">
+                              <a class="jp-full-screen" title="full screen"><i class="fa fa-expand"></i></a>
+                              <a class="jp-restore-screen" title="restore screen"><i class="fa fa-compress text-lt"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="jp-playlist dropup" id="playlist">
+                        <ul class="dropdown-menu aside-xl dker">
+                          <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+                          <li class="list-group-item"></li>
+                        </ul>
+                      </div>
+                      <div class="jp-no-solution hide">
+                        <span>Update Required</span>
+                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                      </div>
+                    </div>
+                  </div>
+                </footer>  
   </section>
-  <script src="vendor/assets/javascrpts/jquery.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="js/bootstrap.js"></script>
-  <!-- App -->
-  <script src="js/app.js"></script>  
-  <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="js/app.plugin.js"></script>
-  <script type="text/javascript" src="/vendor/assets/javasripts/jPlayer/jquery.jplayer.min.js"></script>
-  <script type="text/javascript" src="/vendor/assets/javasripts/jPlayer/add-on/jplayer.playlist.min.js"></script>
-  <script type="text/javascript" src="j/vendor/assets/javasripts/jPlayer/demo.js"></script>
+  
+ 
 </body>
 </html>

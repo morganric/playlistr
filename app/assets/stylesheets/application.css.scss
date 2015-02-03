@@ -10,17 +10,47 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-*= require mediaelementplayer
+
+
+
+*= require jPlayer/jplayer.flat  
 *= require bootstrap
-*= vendor/assets/javascrpts/jPlayer/jplayer.flat.css 
 *= require animate
 *= require font-awesome.min
 *= require simple-line-icons
 *= require font
 *= require app
- *= require_tree .
- *= require_self
+*= require font-awesome
+*= require source-sans-pro
+
+
  */
+
+@font-face {
+  font-family: 'Simple-Line-Icons';
+  src:font-url('Simple-Line-Icons.eot');
+  src:font-url('Simple-Line-Icons.eot') format('embedded-opentype'),
+    font-url('Simple-Line-Icons.svg') format('svg'),
+    font-url('Simple-Line-Icons.woff') format('woff'),
+    font-url('Simple-Line-Icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src:url('fontawesome-webfont.eot?v=4.0.3');
+  src:url('fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fontawesome-webfont.svg#icomoon') format('svg'),
+    url('fontawesome-webfont.woff') format('woff'),
+    url('fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ @import "font-awesome";
+ @import "simple-line-icons";
+
 
  ul {
  padding-left: 0px !important;

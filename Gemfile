@@ -25,9 +25,11 @@ gem 'transloadit-rails'
 gem 'rails-assets-jplayer'
 gem 'jquery-ui-rails'
 gem 'dropzonejs-rails', '~> 0.4.16'
-
+gem "font-awesome-rails"
 gem 'audio_glue'
 gem 'audio_glue-sox_adapter'
+gem 'source-sans-pro-rails'
+gem 'simple-line-icons-rails'
 
 group :development do
   gem 'better_errors'
