@@ -15,10 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require jPLayer/jquery.jplayer.min
-//= require jPlayer/add-on/jplayer.playlist.min
-//= require slimscroll/jquery.slimscroll.min
-//= require jPLayer/demo
 //= require app
 //= require app.plugin 
 
@@ -28,6 +24,8 @@
 //= require jquery.fileupload
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
+//= require slimscroll/jquery.slimscroll.min
+//= require jPLayer/demo
 
 //= require jplayer.js
 //= require jplayer.playlist.js
