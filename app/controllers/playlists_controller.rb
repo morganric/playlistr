@@ -32,6 +32,8 @@ class PlaylistsController < ApplicationController
   # GET /playlists/1
   # GET /playlists/1.json
   def show
+
+    @playlists = Playlist.all.reverse
     
     @list = []
 
@@ -119,6 +121,6 @@ class PlaylistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def playlist_params
-      params.require(:playlist).permit(:title, :description, :audio, :image, :published, :plays, :list, tracks_attributes: [:id, :playlist_id, :audio])
+      params.require(:playlist).permit(:title, :description, :audio, :image, :published, :user_id, :plays, :list, tracks_attributes: [:id, :playlist_id, :audio])
     end
 end

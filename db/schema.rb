@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124121444) do
+ActiveRecord::Schema.define(version: 20150204215151) do
 
   create_table "attachinary_files", force: true do |t|
     t.integer  "attachinariable_id"
@@ -31,6 +31,17 @@ ActiveRecord::Schema.define(version: 20150124121444) do
 
 # Could not dump table "playlists" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
+
+  create_table "profiles", force: true do |t|
+    t.string   "display_name"
+    t.integer  "user_id"
+    t.text     "bio"
+    t.date     "dob"
+    t.string   "image"
+    t.string   "twitter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tracks", force: true do |t|
     t.string   "song"

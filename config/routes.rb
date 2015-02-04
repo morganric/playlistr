@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :profiles
+
   resources :playlists
   resources :tracks
 

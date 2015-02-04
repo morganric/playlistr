@@ -10,19 +10,20 @@
                         <%= image_tag @playlist.image.url(:standard), :class => "img-full m-b" %>
                       </div>
                       <div class="col-sm-7">
-                        <h2 class="m-t-none text-black"><%= @playlist.title %></h2>
+                        <h2 class="m-t-none text-black"><%= @playlist.title.titleize %></h2>
                         <div class="clearfix m-b-lg">
                           <a href="#" class="thumb-sm pull-left m-r">
-                            <img src="images/a0.png" class="img-circle">
+                            <img src="<%= @playlist.user.profile.image.url(:thumbnail) %>" class="img-circle">
                           </a>
                           <div class="clear">
-                            <a href="#" class="text-info">by <%= @playlist.user %></a>
-                            <small class="block text-muted">2,415 followers / 225 following</small>
+                            <a href="<%= profile_path(@playlist.user.profile) %>" class="text-info">by <%= @playlist.user.profile.display_name %></a>
+                            <small class="block text-muted">245 followers / 55 following</small>
                           </div>
                         </div>
-                        <!-- <div class="m-b-lg">
-                          <a href="#" class="btn btn-info jp-play">Play</a> <a href="#" class="btn btn-default">3 Comments</a>
-                        </div> -->
+                        <div class="m-b-lg">
+                          <a href="#" class="btn btn-info jp-play"><i class="icon-control-play i-1x"> </i><%= pluralize(@playlist.plays, "Play") %></a> 
+                          <!-- <a href="#" class="btn btn-default">3 Comments</a> -->
+                        </div>
                         <div>
                           Tags: <a href="#" class="badge bg-light">Musik</a> <a href="#" class="badge bg-light">Pashion</a>
                         </div>
@@ -61,51 +62,18 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">Suggestions</div>
                     <div class="panel-body">
+                    <% @playlists.each do |playlist| %>
                       <article class="media">
                         <a href="#" class="pull-left thumb-md m-t-xs">
-                          <img src="images/">
+                          <img src="<%= playlist.image.url(:thumbnail) %>">
                         </a>
                         <div class="media-body">                        
-                          <a href="#" class="font-semibold">Bootstrap 3: What you need to know</a>
-                          <div class="text-xs block m-t-xs"><a href="#">Travel</a> 2 minutes ago</div>
+                          <a href="#" class="font-semibold"><%= playlist.title.titleize %></a>
+                          <div class="text-xs block m-t-xs"><a href="#"><%= playlist.user %></a></div>
                         </div>
                       </article>
-                      <article class="media">
-                        <a href="#" class="pull-left thumb-md m-t-xs">
-                          <img src="images/">
-                        </a>
-                        <div class="media-body">                        
-                          <a href="#" class="font-semibold">Lorem ipsum dolor sit amet it.</a>
-                          <div class="text-xs block m-t-xs"><a href="#">Design</a> 2 hours ago</div>
-                        </div>
-                      </article>
-                      <article class="media">
-                        <a href="#" class="pull-left thumb-md m-t-xs">
-                          <img src="images/">
-                        </a>
-                        <div class="media-body">                        
-                          <a href="#" class="font-semibold">Sed diam nonummy tincidunt ut laoreet</a>
-                          <div class="text-xs block m-t-xs"><a href="#">MFC</a> 1 week ago</div>
-                        </div>
-                      </article>
-                      <article class="media">
-                        <a href="#" class="pull-left thumb-md m-t-xs">
-                          <img src="images/">
-                        </a>
-                        <div class="media-body">                        
-                          <a href="#" class="font-semibold">Lonummy nibh euismod sed laoreet</a>
-                          <div class="text-xs block m-t-xs"><a href="#">MFC</a> 1 week ago</div>
-                        </div>
-                      </article>
-                      <article class="media">
-                        <a href="#" class="pull-left thumb-md m-t-xs">
-                          <img src="images/">
-                        </a>
-                        <div class="media-body">                        
-                          <a href="#" class="font-semibold">Mibh euismod tincidunt ut laoreet</a>
-                          <div class="text-xs block m-t-xs"><a href="#">MFC</a> 1 week ago</div>
-                        </div>
-                      </article>
+                      <% end %>
+                     
                     </div>
                   </div>
                 </div>
@@ -215,17 +183,6 @@ $(document).ready(function(){
 
   </script>
 
-
-<% unless current_user && current_user.admin? %>
-
-<style type="text/css">
-  a.jp-playlist-item, .jp-seek-bar {
-    pointer-events: none;
-   cursor: default;
-}
-</style>
-
-<% end %>
 
 
 
