@@ -15,17 +15,17 @@
                           <a href="#" class="thumb-sm pull-left m-r">
                             <img src="<%= @playlist.user.profile.image.url(:thumbnail) %>" class="img-circle">
                           </a>
-                          <div class="clear">
+                          <div class="clear ">
                             <a href="<%= profile_path(@playlist.user.profile) %>" class="text-info">by <%= @playlist.user.profile.display_name %></a>
                             <small class="block text-muted">245 followers / 55 following</small>
                           </div>
                         </div>
-                        <div class="m-b-lg">
-                          <a href="#" class="btn btn-info jp-play"><i class="icon-control-play i-1x"> </i><%= pluralize(@playlist.plays, "Play") %></a> 
+                        <div class="m-b-lg jp-controls">
+                          <a href="" class="btn btn-info jp-play"><i class="icon-control-play i-1x"> </i><%= pluralize(@playlist.plays, "Play") %></a> 
                           <!-- <a href="#" class="btn btn-default">3 Comments</a> -->
                         </div>
                         <div>
-                          Tags: <a href="#" class="badge bg-light">Musik</a> <a href="#" class="badge bg-light">Pashion</a>
+                          Tags: <a href="#" class="badge bg-light">Music</a> <a href="#" class="badge bg-light">Playlist</a>
                         </div>
                          <div class="m-t well">
                       <p><%= @playlist.description %></p>
@@ -69,7 +69,7 @@
                         </a>
                         <div class="media-body">                        
                           <a href="#" class="font-semibold"><%= playlist.title.titleize %></a>
-                          <div class="text-xs block m-t-xs"><a href="#"><%= playlist.user %></a></div>
+                          <div class="text-xs block m-t-xs"><a href="#"><%= playlist.user.profile.display_name %></a></div>
                         </div>
                       </article>
                       <% end %>
@@ -132,13 +132,7 @@
 
 $(document).ready(function(){
   $('a.jp-playlist-item').attr('href', 'javascript: void(0)');
-
-
-  $('.jp-play').on('click', function(){
-    
-    $.ajax("<%=raw playlist_play_url(@playlist) %>");
-    console.log('play');
-    rls = <%=raw @tracklist.reverse.to_json %>;
+     urls = <%=raw @tracklist.reverse.to_json %>;
 
               playlist = [
         ]; // Empty playlist
@@ -173,6 +167,14 @@ $(document).ready(function(){
 
       options = { swfPath: "/js", supplied: "ogv, m4v, oga, mp3" };
       myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options);
+
+  $('.jp-play').on('click', function(e){
+    
+    e.preventDefault();
+ 
+      myPlaylist.play();
+          $.ajax("<%=raw playlist_play_url(@playlist) %>");
+    console.log('play');  
 
   })
 
