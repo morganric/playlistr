@@ -580,7 +580,7 @@
                 </footer>  
   </section>
 
-
+<%  unless current_user && current_user.admin? %>
 
 <style type="text/css">
   a.jp-playlist-item, .jp-seek-bar , .jp-next, .jp-previous {
@@ -588,6 +588,8 @@
    cursor: default;
 }
 </style>
+
+<% end %>
 
 
 <script>
