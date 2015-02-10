@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get '/playlists/:id/play' => 'playlists#plays', as: :playlist_play
 
+  get 'about' => 'visitors#about', as: :about
+  get 'genres' => 'visitors#genres', as: :genres
+
   mount Upmin::Engine => '/admin'
   root to: 'playlists#index'
   devise_for :users

@@ -171,7 +171,7 @@
                       </a>
                     </li> -->
                     <li>
-                      <a href="<%= root_path %>" data-target="#content" data-el="#bjax-el" data-replace="true">
+                      <a href="<%= about_path %>" >
                         <i class="icon-info icon  text-primary"></i>
                         <span class="font-bold">About</span>
                       </a>
@@ -422,7 +422,7 @@
                   </ul> -->
                   <ul class="nav text-sm">
                     <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
+                      <span class="pull-right"><a href="<%= new_playlist_path %>"><i class="icon-plus i-lg"></i></a></span>
                       Playlist
                     </li>
                     <li>
@@ -489,21 +489,15 @@
         <!-- /.aside -->
         <section id="content">
           <section class="vbox">          
-            <section class="scrollable wrapper">
 
-            <main role="main">
-              <div class="container" >
+
+
                <%= render 'layouts/messages' %>
                <%= yield %>
-               </div>
-            </main>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.attachinary-input').attachinary();
-    });
-      </script>
-            </section>
+
+  
+
           </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
@@ -590,6 +584,12 @@
 </style>
 
 <% end %>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('.attachinary-input').attachinary();
+    });
+      </script>
 
 
 <script>
