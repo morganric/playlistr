@@ -10,7 +10,7 @@ class PlaylistsController < ApplicationController
   # GET /playlists
   # GET /playlists.json
   def index
-    @playlists = Playlist.all.reverse
+    @playlists = Playlist.all.order('plays DESC')
   end
 
   def plays
@@ -72,6 +72,7 @@ class PlaylistsController < ApplicationController
   # POST /playlists.json
   def create
     @playlist = Playlist.new(playlist_params)
+    @playlist.user_id = current_user.id
 
     respond_to do |format|
      if @playlist.save

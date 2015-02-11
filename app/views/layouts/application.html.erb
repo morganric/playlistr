@@ -107,7 +107,7 @@
                 <a href="#">Settings</a>
               </li>
               <li>
-                <a href="profile.html">Profile</a>
+                <a href="<%= profile_path(current_user.profile) %>">Profile</a>
               </li>
               <li>
                 <a href="#">
@@ -119,9 +119,7 @@
                 <a href="docs.html">Help</a>
               </li>
               <li class="divider"></li>
-              <li>
-                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-              </li>
+              <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
             </ul>
           </li>
           <% end %>
@@ -478,12 +476,11 @@
                         <a href="docs.html">Help</a>
                       </li>
                       <li class="divider"></li>
-                      <li>
-                        <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-                      </li>
+                      <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
                     </ul>
                   </div>
-                </div>            </footer>
+                </div>
+                </footer>
           </section>
         </aside>
         <!-- /.aside -->

@@ -39,10 +39,11 @@
                       <ul class="list-group list-group-lg">
                       <% @tracklist.reverse.each do |track| %>
                         <li class="list-group-item">
-                          <div class="pull-right m-l  hidden">
-                            <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <div class="pull-right m-l ">
+                       <!--      <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
                             <a href="#" class="m-r-sm"><i class="icon-plus"></i></a>
-                            <a href="#"><i class="icon-close"></i></a>
+                            <a href="#"><i class="icon-close"></i></a> -->
+                            <a href="<%= track_path(track) %>"><i class="icon-link"></i></a>
                           </div>
                           <a href="#" class="jp-play-me m-r-sm pull-left hidden">
                             <i class="icon-control-play text"></i>
