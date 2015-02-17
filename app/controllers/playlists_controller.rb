@@ -3,7 +3,7 @@ class PlaylistsController < ApplicationController
   after_action :create_track_list, :only => :create
 
   before_filter :authenticate_user!,  except: [:index, :show]
-  after_action :verify_authorized, only: [:new]
+  # after_action :verify_authorized, only: [:new]
 
     require 'open-uri'
 
@@ -66,7 +66,7 @@ class PlaylistsController < ApplicationController
   def new
     @playlist = Playlist.new
     # @tracks = @playlist.tracks.build
-      authorize @user
+      # authorize User
   end
 
   # GET /playlists/1/edit
