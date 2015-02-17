@@ -2,6 +2,9 @@ class PlaylistsController < ApplicationController
   before_action :set_playlist, only: [:show, :edit, :update, :destroy, :plays]
   after_action :create_track_list, :only => :create
 
+  before_filter :authenticate_user!,  except: [:index, :show]
+  after_action :verify_authorized, only: [:new]
+
     require 'open-uri'
 
     require 'mp3info'
@@ -11,6 +14,7 @@ class PlaylistsController < ApplicationController
   # GET /playlists.json
   def index
     @playlists = Playlist.all.order('plays DESC')
+      # authorize @user
   end
 
   def plays
@@ -32,7 +36,7 @@ class PlaylistsController < ApplicationController
   # GET /playlists/1
   # GET /playlists/1.json
   def show
-
+      # authorize @user
     @playlists = Playlist.all.reverse
     
     @list = []
@@ -62,6 +66,7 @@ class PlaylistsController < ApplicationController
   def new
     @playlist = Playlist.new
     # @tracks = @playlist.tracks.build
+      authorize @user
   end
 
   # GET /playlists/1/edit

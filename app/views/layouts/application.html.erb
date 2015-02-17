@@ -46,6 +46,12 @@
             <i class="fa fa-dedent text-active"></i>
           </a>
         </li>
+        <li>
+                      <a href="<%= new_playlist_path %>">
+                        <i class="icon-cloud-upload icon text-success"></i>
+                        <span class="font-bold">Upload</span>
+                      </a>
+                    </li>
       </ul>
       <%= form_tag search_path, :class=>"navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs", :method => 'post' do %>
         <div class="form-group">
@@ -149,12 +155,7 @@
                     <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
                       Discover
                     </li>
-                    <li>
-                      <a href="<%= new_playlist_path %>">
-                        <i class="icon-cloud-upload icon text-success"></i>
-                        <span class="font-bold">Upload</span>
-                      </a>
-                    </li>
+                    
                     <li>
                       <a href="genres.html">
                         <i class="icon-music-tone-alt icon text-info"></i>

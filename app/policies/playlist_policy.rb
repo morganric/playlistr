@@ -15,7 +15,7 @@ class PlaylistPolicy
   end
 
    def new?
-    @current_user != nil
+    current_user != nil
   end
 
 
