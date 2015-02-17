@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'about' => 'visitors#about', as: :about
   get 'genres' => 'visitors#genres', as: :genres
+  post 'search' => 'visitors#search', as: :search
+
 
   mount Upmin::Engine => '/admin'
   root to: 'playlists#index'

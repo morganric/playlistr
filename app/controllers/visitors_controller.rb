@@ -7,4 +7,11 @@ class VisitorsController < ApplicationController
 	def genres
 
 	end
+
+	def search 
+		@q = params[:q]
+		@playlists = Playlist.where(:title => @q)
+		
+	end
+
 end

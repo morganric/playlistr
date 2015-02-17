@@ -93,7 +93,9 @@ a.jp-playlist-current {
  content: "(now playing)";
 }
 
-
+div.jp-progress {
+  padding: 0 25px !important;
+}
 
 
 .one {
