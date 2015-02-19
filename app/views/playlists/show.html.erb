@@ -65,12 +65,12 @@
                     <div class="panel-body">
                     <% @playlists.each do |playlist| %>
                       <article class="media">
-                        <a href="#" class="pull-left thumb-md m-t-xs">
+                        <a href="<%= playlist_path(playlist) %>" class="pull-left thumb-md m-t-xs">
                           <img src="<%= playlist.image.url(:thumbnail) %>">
                         </a>
                         <div class="media-body">                        
-                          <a href="#" class="font-semibold"><%= playlist.title.titleize %></a>
-                          <div class="text-xs block m-t-xs"><a href="#"><%= playlist.user.profile.display_name %></a></div>
+                          <a href="<%= playlist_path(playlist) %>" class="font-semibold"><%= playlist.title.titleize %></a>
+                          <div class="text-xs block m-t-xs"><a href="<%= profile_path(playlist.user.profile) %>"><%= playlist.user.profile.display_name %></a></div>
                         </div>
                       </article>
                       <% end %>
