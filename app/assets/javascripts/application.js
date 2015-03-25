@@ -18,14 +18,13 @@
 //= require app
 //= require app.plugin 
 
-
 //= require jquery.ui.widget
 //= require jquery.iframe-transport
 //= require jquery.fileupload
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require slimscroll/jquery.slimscroll.min
-
+//= require s3_direct_upload
 
 //= require jplayer.js
 //= require jplayer.playlist.js

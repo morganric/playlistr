@@ -30,6 +30,15 @@ gem 'audio_glue'
 gem 'audio_glue-sox_adapter'
 gem 'source-sans-pro-rails'
 gem 'simple-line-icons-rails'
+gem 'fog'
+gem "fog-aws"
+gem 'rmagick'
+gem 'mini_magick'
+gem 's3_direct_upload'
+gem 'acts-as-taggable-on', '~> 3.4'
+gem  'acts_as_list'
+# gem 'activeadmin-sortable'
+gem 'ranked-model'
 
 group :development do
   gem 'better_errors'

@@ -3,6 +3,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
       $('.attachinary-input').attachinary();
+      $("#s3-uploader").S3Uploader();
   });
 </script>
 
@@ -24,9 +25,10 @@
     <%= f.label :image %>
     <%= f.file_field :image %>
     <%= f.input :user_id, as: :hidden %>
-    <%#= f.input :published, as: :hidden %>
     <br/>
-   <%= f.label :tracks %>
+    <%#= f.input :published, as: :hidden %>
+    <%= f.input :tag_list %>
+    <br/>
     <%= attachinary_file_field_tag 'playlist[audio]', @playlist, :audio %>
 
 

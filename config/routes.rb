@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-
+    mount Attachinary::Engine => "/attachinary"
   resources :profiles
 
   resources :playlists
   resources :tracks
 
-  mount Attachinary::Engine => "/attachinary"
 
   get '/playlists/:id/play' => 'playlists#plays', as: :playlist_play
 

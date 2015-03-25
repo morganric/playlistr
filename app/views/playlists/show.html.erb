@@ -5,9 +5,9 @@
                 <div class="col-sm-8">
                   <div class="panel wrapper-lg">
                     <div class="row">
-                      <div class="col-sm-5">
-                        
-                        <%= image_tag @playlist.image.url(:standard), :class => "img-full m-b" %>
+                      <div class="col-sm-5">  
+
+                        <%= image_tag @playlist.image.url(), :class => "img-full m-b" %>
                       </div>
                       <div class="col-sm-7">
                         <h2 class="m-t-none text-black"><%= @playlist.title.titleize %></h2>
@@ -25,7 +25,9 @@
                           <!-- <a href="#" class="btn btn-default">3 Comments</a> -->
                         </div>
                         <div>
-                          Tags: <a href="#" class="badge bg-light">Music</a> <a href="#" class="badge bg-light">Playlist</a>
+                          Tags: <% @playlist.tags.each do |tag| %>
+                          <a href="#" class="badge bg-light"><%= tag %></a>
+                          <% end %>
                         </div>
                          <div class="m-t well">
                       <p><%= @playlist.description %></p>
