@@ -31,6 +31,8 @@ db/*.sqlite3
 /config/database.yml
 /config/cloudinary.yml
 /config/secrets.yml
+/config/initializers/s3_direct_upload.rb
+
 /coverage.data
 /coverage/
 /db/*.javadb/
